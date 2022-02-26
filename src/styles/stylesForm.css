@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,400;1,300&display=swap');.formulario{
+    width: 40%;
+    padding: 1%;
+    padding-bottom: 3%;
+    margin: auto;
+    background: #f1e9d7f5;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+    box-shadow: 0 10.36px 8.896px #c4b59d
+    ,   0 -2px 1px #fff;
+}
+.Titulo{
+    text-align: center;
+    font-family: 'Paytone One', sans-serif;
+    font-weight: bolder;
+    font-size: 40px;
+    color: #e6e2de;
+    text-shadow: 0 10.36px 8.896px #c4b59d
+     ,   0 -2px 1px #fff;
+    margin-bottom: 5%;
+}
+.ContInput{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 4%;
+    gap: 8px;
+}
+.inputs{
+    border: none;
+    box-shadow: 0 10.36px 8.896px #c4b59d
+    ,   0 -2px 1px #fff;
+    border-radius: 5px;
+    padding: 2%;
+    color: rgb(151, 148, 148);
+}
+.btn{
+    border: none;
+    border-radius: 12px;
+    width: 35%;
+    margin: auto;
+    box-shadow: 0 10.36px 8.896px #c4b59d
+    ,   0 -2px 1px #fff;
+    padding: 2%;
+    color: rgb(151, 148, 148);
+}
+.btn:focus{
+    background:#ddcdb1b6 ;
+}

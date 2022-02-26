@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.ContPadre{
+    padding-top: 2%;
+    height: 100vh;
+    background: linear-gradient(rgb(241, 236, 205), #bbb09c);
+}
