@@ -2,7 +2,7 @@ import { combineReducers, createStore } from "redux";
 import { ReducerUsuarios } from "../Reducers/ReducerDatos";
 
 const reducers = combineReducers({
-    citas: ReducerUsuarios
+    usuarios: ReducerUsuarios
 })
 
 // const obtener = getLocalStorage();

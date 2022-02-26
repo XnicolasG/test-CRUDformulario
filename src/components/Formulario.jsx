@@ -20,7 +20,8 @@ const Formulario = () => {
             ...datos,
             [target.name]: target.value
         })
-        console.log(datos)
+        
+        
     }
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -33,6 +34,7 @@ const Formulario = () => {
         }
         console.table(objeto)
         dispatch(AgregarUsuario(objeto))
+        
     }
 
     return (
@@ -40,12 +42,12 @@ const Formulario = () => {
             <h2 className='Titulo'>Ingrese sus datos</h2>
             <div className='ContInput'>
                 <input className='inputs' name='Nombre' value={Nombre} onChange={handleInputChange} placeholder='Nombre' type="text" required />
-                <input className='inputs' name='Apellido' value={Apellido} onChange={handleInputChange} placeholder='Apellido' type="text" required />
+                <input className='inputs' name='Apellido' value={Apellido} onChange={handleInputChange} placeholder='Apellidos' type="text" required />
                 <input className='inputs' name='Fecha' value={Fecha} onChange={handleInputChange} placeholder='Fecha' type="date" required />
                 <input className='inputs' name='Ciudad' value={Ciudad} onChange={handleInputChange} placeholder='Ciudad' type="text" list='ciudades' required />
                 <datalist id='ciudades'>
                     <option value="Bogotá" />
-                    <option value="Medellin" />
+                    <option value="Medellín" />
                     <option value="Cali" />
                     <option value="Barranquilla" />
                     <option value="Cartagena" />

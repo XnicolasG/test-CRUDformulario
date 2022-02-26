@@ -3,7 +3,7 @@
     padding: 0;
 }
 .ContPadre{
-    padding-top: 2%;
-    height: 100vh;
-    background: linear-gradient(rgb(241, 236, 205), #bbb09c);
+    padding-top: 1%;
+    height: 150vh;
+    background: linear-gradient(rgb(241, 236, 205), #bbb19c);
 }

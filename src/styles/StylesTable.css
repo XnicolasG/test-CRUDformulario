@@ -1,0 +1,28 @@
+.Listado{
+    width: 42%;
+    padding: 1%;
+    padding-bottom: 3%;
+    margin: auto;
+    margin-top: 3%;
+    background: #f1e9d7ee;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+    box-shadow: 0 10.36px 8.896px #c4b59d
+    ,   0 -2px 1px rgb(243, 239, 239);
+}
+.results{
+    gap: 1%;   
+}
+
+.Filas{
+    padding: 2%;
+}
+.btnList{
+   background: transparent;
+   border: none; 
+}
+.btnList:hover{
+    font-size: .9rem;
+    transition: all .5s ease;
+}

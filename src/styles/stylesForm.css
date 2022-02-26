@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,400;1,300&display=swap');.formulario{
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,400;1,300&display=swap');
+.formulario{
     width: 40%;
     padding: 1%;
     padding-bottom: 3%;
@@ -46,6 +47,6 @@
     padding: 2%;
     color: rgb(151, 148, 148);
 }
-.btn:focus{
+.btn:active{
     background:#ddcdb1b6 ;
 }
