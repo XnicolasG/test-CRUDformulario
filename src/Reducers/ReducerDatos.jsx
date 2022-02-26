@@ -13,7 +13,10 @@ export const ReducerUsuarios = (state = initialState, action) => {
                     action.payload
                 ]
             }
-    
+        case Types.Eliminar:
+            return{
+                datos: state.datos.filter(usuario=> usuario.id !== action.payload)
+            }
         default:
             return state
     }

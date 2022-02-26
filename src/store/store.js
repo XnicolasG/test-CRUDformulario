@@ -5,7 +5,7 @@ const reducers = combineReducers({
     usuarios: ReducerUsuarios
 })
 
-// const obtener = getLocalStorage();
+
 
 export const store = createStore(
     reducers,

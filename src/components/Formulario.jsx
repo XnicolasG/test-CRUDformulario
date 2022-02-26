@@ -7,8 +7,8 @@ import { AgregarUsuario } from '../actions/actionDatos'
 const Formulario = () => {
    
     const dispatch = useDispatch()
-
-    const [datos, setDatos] = useState({
+    
+    const [datos , setDatos] = useState({
         Nombre: '',
         Apellido: '',
         Fecha: '',
@@ -23,6 +23,8 @@ const Formulario = () => {
         
         
     }
+    
+
     const handleSubmit = (e) => {
         e.preventDefault()
         const objeto = {
@@ -34,7 +36,7 @@ const Formulario = () => {
         }
         console.table(objeto)
         dispatch(AgregarUsuario(objeto))
-        
+       
     }
 
     return (
@@ -43,7 +45,7 @@ const Formulario = () => {
             <div className='ContInput'>
                 <input className='inputs' name='Nombre' value={Nombre} onChange={handleInputChange} placeholder='Nombre' type="text" required />
                 <input className='inputs' name='Apellido' value={Apellido} onChange={handleInputChange} placeholder='Apellidos' type="text" required />
-                <input className='inputs' name='Fecha' value={Fecha} onChange={handleInputChange} placeholder='Fecha' type="date" required />
+                <input className='inputs' name='Fecha' value={Fecha} onChange={handleInputChange} placeholder='Fecha' type="date" max='1999-12-31' required />
                 <input className='inputs' name='Ciudad' value={Ciudad} onChange={handleInputChange} placeholder='Ciudad' type="text" list='ciudades' required />
                 <datalist id='ciudades'>
                     <option value="Bogotá" />

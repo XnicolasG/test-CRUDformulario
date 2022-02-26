@@ -12,17 +12,23 @@
     ,   0 -2px 1px rgb(243, 239, 239);
 }
 .results{
-    gap: 1%;   
+    gap: 1%;  
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
 }
 
 .Filas{
-    padding: 2%;
+    padding: 4%;
+    color: rgb(102, 100, 100);
 }
 .btnList{
    background: transparent;
    border: none; 
+   margin: 1%;
 }
 .btnList:hover{
-    font-size: .9rem;
+    font-size: 1.3rem;
     transition: all .5s ease;
 }
