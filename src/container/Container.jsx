@@ -10,7 +10,7 @@ const Container = () => {
         <span>Repositorio</span>
         <div className="container">
           <center>
-          <a target='_blank' href="https://github.com/XnicolasG/test-CRUDformulario" className="fab">
+          <a target='_blank' rel="noreferrer" href="https://github.com/XnicolasG/test-CRUDformulario" className="fab">
             <GoMarkGithub />
           </a>
           </center>
