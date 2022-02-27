@@ -15,6 +15,6 @@ export const EliminarUsuario = (id) => {
 export const ModificarUsuario = () => {
     return{
         type: Types.Modificar,
-        payload:id
+        payload:''
     }
 }
