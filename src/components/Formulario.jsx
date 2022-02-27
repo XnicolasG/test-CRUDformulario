@@ -3,13 +3,14 @@ import '../styles/stylesForm.css'
 import { v4 as uuidv4 } from 'uuid'
 import { useDispatch } from 'react-redux'
 import { AgregarUsuario } from '../actions/actionDatos'
-import  Usuario  from './Usuario'
+import Usuario from './Usuario'
+
 
 const Formulario = () => {
-   
+
     const dispatch = useDispatch()
-    const initalState = {}
-    const [datos , setDatos] = useState({
+
+    const [datos, setDatos] = useState({
         Nombre: '',
         Apellido: '',
         Fecha: '',
@@ -21,11 +22,18 @@ const Formulario = () => {
             ...datos,
             [target.name]: target.value
         })
-        
-        
-    }
-    
 
+
+    }
+
+    const reset = () => {
+        setDatos({
+            Nombre: '',
+            Apellido: '',
+            Fecha: '',
+            Ciudad: ''
+        })
+    }
     const handleSubmit = (e) => {
         e.preventDefault()
         const objeto = {
@@ -37,35 +45,34 @@ const Formulario = () => {
         }
         console.table(objeto)
         dispatch(AgregarUsuario(objeto))
-        setDatos(initalState)
-        
+        reset()
     }
 
     return (
         <>
-        <form className='formulario' onSubmit={handleSubmit}>
-            <h2 className='Titulo'>Ingrese sus datos</h2>
-            <div className='ContInput'>
-                <input className='inputs' name='Nombre' value={Nombre} onChange={handleInputChange} placeholder='Nombre' type="text" required />
-                <input className='inputs' name='Apellido' value={Apellido} onChange={handleInputChange} placeholder='Apellidos' type="text" required />
-                <input className='inputs' name='Fecha' value={Fecha} onChange={handleInputChange} placeholder='Fecha' type="date" max='1999-12-31' required />
-                <input className='inputs' name='Ciudad' value={Ciudad} onChange={handleInputChange} placeholder='Ciudad' type="text" list='ciudades' required />
-                <datalist id='ciudades'>
-                    <option value="Bogotá" />
-                    <option value="Medellín" />
-                    <option value="Cali" />
-                    <option value="Barranquilla" />
-                    <option value="Cartagena" />
-                </datalist>
-            </div>
-            <center>
-                <button type='submit' className='btn'>Guardar</button>
-            </center>
-        </form>
-        <Usuario  />
-    </>
+            <form className='formulario' onSubmit={handleSubmit}>
+                <h2 className='Titulo'>Ingrese sus datos</h2>
+                <div className='ContInput'>
+                    <input className='inputs' name='Nombre' value={Nombre} placeholder='Nombre' onChange={handleInputChange} type="text" required />
+                    <input className='inputs' name='Apellido' value={Apellido} placeholder='Apellidos' onChange={handleInputChange} type="text" required />
+                    <input className='inputs' name='Fecha' value={Fecha} onChange={handleInputChange} type="date" max='1999-12-31' required />
+                    <input className='inputs' name='Ciudad' value={Ciudad} placeholder='Ciudad' onChange={handleInputChange} type="text" list='ciudades' required />
+                    <datalist id='ciudades'>
+                        <option value="Bogotá" />
+                        <option value="Medellín" />
+                        <option value="Cali" />
+                        <option value="Barranquilla" />
+                        <option value="Cartagena" />
+                    </datalist>
+                </div>
+                <center>
+                    <button /* type='submit' */ className='btn'>Guardar</button>
+                </center>
+            </form>
+            <Usuario />
+        </>
     )
-    
+
 }
 
 export default Formulario
