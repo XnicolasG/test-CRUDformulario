@@ -1,5 +1,5 @@
 .Listado{
-    width: 42%;
+    width: 55%;
     padding: 1%;
     padding-bottom: 3%;
     margin: auto;
@@ -31,4 +31,18 @@
 .btnList:hover{
     font-size: 1.3rem;
     transition: all .5s ease;
+}
+@media screen and (min-width:768px) and (max-width:1023px){
+    .Filas{
+        font-size: .8rem;
+    }
+}
+@media screen and (max-width:767px){
+    .Listado{
+        width: 72%;
+        
+    }
+    .Filas{
+        font-size: .65rem;
+    }
 }
