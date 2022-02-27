@@ -17,6 +17,12 @@ export const ReducerUsuarios = (state = initialState, action) => {
             return{
                 datos: state.datos.filter(usuario=> usuario.id !== action.payload)
             }
+        case Types.Modificar:
+            
+            return{
+              
+                
+            }    
         default:
             return state
     }

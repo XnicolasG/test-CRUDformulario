@@ -6,6 +6,7 @@ import '../styles/StylesTable.css'
 import { useDispatch } from 'react-redux'
 import { EliminarUsuario } from '../actions/actionDatos'
 import Swal from 'sweetalert2'
+import {ModalUser} from './ModalUser'
 
 
 
@@ -15,17 +16,10 @@ const Usuario = () => {
     const { datos } = useSelector(store => store.usuarios)
     console.table(datos)
 
-    // const [show, setShow] = useState(false)
-    // const [datosModal, setDatosModal] = useState([])
+    const [show, setShow] = useState(false)
+    const [datosModal, setDatosModal] = useState([])
 
 
-    // const activateModal = (id) => {
-    //     const modalUs = datos.find((user) => (user.id === id))
-    //     setDatosModal(modalUs)
-    //     console.log(datosModal)
-    //     setShow(true)
-
-    // }
 
     const handleDelete = (id) => {
         dispatch(EliminarUsuario(id))
@@ -50,10 +44,14 @@ const Usuario = () => {
         })
     }
 
-
+    
     const edit = (id)=>{
         const findData = datos.find(user => user.id === id)
         console.log(findData)
+        setShow(true)
+        setDatosModal(findData)
+        handleDelete(id)
+        
     }
 
     return (
@@ -88,7 +86,9 @@ const Usuario = () => {
 
                 </tbody>
             </table>
-
+               {
+                   show === true ? <ModalUser datosU={datosModal} show={show} set={setShow} /> : console.log('no paso')
+               }     
         </>
     )
 }

@@ -11,6 +11,18 @@
     box-shadow: 0 10.36px 8.896px #c4b59d
     ,   0 -2px 1px #fff;
 }
+.formulario2{
+    width: 80%;
+    padding: 1%;
+    padding-bottom: 3%;
+    margin: auto;
+    background: #f1e9d7f5;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+    box-shadow: 0 10.36px 8.896px #c4b59d
+    ,   0 -2px 1px #fff;
+}
 .Titulo{
     text-align: center;
     font-family: 'Paytone One', sans-serif;
@@ -42,6 +54,7 @@
     border-radius: 12px;
     width: 35%;
     margin: auto;
+    margin-right: 1%;
     box-shadow: 0 10.36px 8.896px #c4b59d
     ,   0 -2px 1px #fff;
     padding: 2%;
