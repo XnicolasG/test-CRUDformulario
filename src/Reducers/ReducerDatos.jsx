@@ -20,8 +20,6 @@ export const ReducerUsuarios = (state = initialState, action) => {
         case Types.Modificar:
             
             return{
-              
-                
             }    
         default:
             return state
